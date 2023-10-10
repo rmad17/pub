@@ -13,6 +13,7 @@ var router *gin.Engine
 
 func main() {
     models.ConnectDatabase()
+    models.Db.AutoMigrate(&models.User{})
 
     router := gin.Default()
 
